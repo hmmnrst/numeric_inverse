@@ -20,7 +20,7 @@ class Integer
 	#   63.inv(100) * 63         #=> 1701
 	#   63.inv(100) * 63 % 100   #=> 1
 	#
-	#   64.inv(100)   #=> ArgumentError: modulus 100 is not coprime to 64
+	#   64.inv(100)   #=> ArgumentError: modulus is not coprime to the receiver
 	#
 	def inverse(m = nil)
 		return Rational(1, self) if m.nil?
@@ -35,7 +35,7 @@ class Integer
 		# x is an inverse iff self.gcd(m) == 1
 		if a.abs != 1
 			raise ArgumentError,
-			      "modulus #{m} is not coprime to #{self}"
+			      "modulus is not coprime to the receiver"
 		end
 
 		x = -x if a < 0
