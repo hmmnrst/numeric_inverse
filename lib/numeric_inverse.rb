@@ -31,7 +31,7 @@ module NumericInverse
 			end
 
 			x = -x if a < 0
-			x % m.abs   # 0 <= x < |m|
+			x % m   # 0 <= x < m || m < x <= 0
 		end
 
 		alias inv inverse
