@@ -55,7 +55,7 @@ p 63.inv(100)              #=> 27
 p 63.inv(100) * 63         #=> 1701
 p 63.inv(100) * 63 % 100   #=> 1
 
-p 64.inv(100)   #=> ArgumentError: modulus 100 is not coprime to 64
+p 64.inv(100)   #=> ArgumentError: modulus is not coprime to the receiver
 ```
 
 ## Development

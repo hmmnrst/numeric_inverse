@@ -27,7 +27,7 @@ module NumericInverse
 			# x is an inverse iff self.gcd(m) == 1
 			if a.abs != 1
 				raise ArgumentError,
-				      "modulus #{m} is not coprime to #{self}"
+				      "modulus is not coprime to the receiver"
 			end
 
 			x = -x if a < 0

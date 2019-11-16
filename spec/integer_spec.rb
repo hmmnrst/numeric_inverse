@@ -19,7 +19,7 @@ RSpec.describe "Integer#inverse" do
 
 		context "and when GCD(self, modulus) != 1" do
 			it "raises ArgumentError" do
-				expect { 64.inverse(100) }.to raise_error(ArgumentError, "modulus 100 is not coprime to 64")
+				expect { 64.inverse(100) }.to raise_error(ArgumentError, "modulus is not coprime to the receiver")
 			end
 		end
 	end
