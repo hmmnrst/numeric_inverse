@@ -10,10 +10,10 @@ RSpec.describe "Integer#inverse" do
 	context "when a modulus given" do
 		context "and when GCD(self, modulus) == 1" do
 			it "returns a modular multiplicative inverse" do
-				expect( 63.inverse( 100)).to eql(27 %  100)
-				expect(-63.inverse( 100)).to eql(73 %  100)
-				expect( 63.inverse(-100)).to eql(27 % -100)
-				expect(-63.inverse(-100)).to eql(73 % -100)
+				expect( 63.inverse( 100)).to eql( 27 %  100)
+				expect(-63.inverse( 100)).to eql(-27 %  100)
+				expect( 63.inverse(-100)).to eql( 27 % -100)
+				expect(-63.inverse(-100)).to eql(-27 % -100)
 			end
 		end
 
