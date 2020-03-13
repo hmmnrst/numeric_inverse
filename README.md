@@ -32,7 +32,7 @@ using NumericInverse
 p Rational(7, 22).inv   #=> (22/7)
 p Integer(16).inv       #=> (1/16)
 p Float(16).inv         #=> 0.0625
-p Complex(3, 4).inv     #=> ((3/25)-(4/25)*i)
+p Complex("1+2i").inv   #=> ((1/5)-(2/5)*i)
 
 # arithmetic mean and harmonic mean
 a = [9, 10, 15, 18]
