@@ -1,0 +1,25 @@
+name: Test
+
+on:
+  - push
+  - pull_request
+
+jobs:
+  unit-test:
+    strategy:
+      matrix:
+        ruby: [ '2.4', '2.5', '2.6', '2.7' ]
+    runs-on: ubuntu-latest
+    name: Unit test with Ruby ${{ matrix.ruby }}
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+      - name: Setup Ruby
+        uses: actions/setup-ruby@v1
+        with:
+          ruby-version: ${{ matrix.ruby }}
+      - name: Build and test
+        run: |
+          gem install --no-document bundler
+          bundle install --jobs 4 --retry 3
+          bundle exec rake spec
